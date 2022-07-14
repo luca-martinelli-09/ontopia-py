@@ -3,10 +3,8 @@ from typing import List
 from rdflib import RDF, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DC, RDF, RDFS, SKOS
 
-from .Thing import Thing
 
-
-class ConceptScheme(Thing):
+class ConceptScheme:
     label: List[Literal] = []
     creator: List[Literal] = []
     description: List[Literal] = []
