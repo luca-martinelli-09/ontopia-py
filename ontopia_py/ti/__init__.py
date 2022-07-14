@@ -1,4 +1,4 @@
-from DayOfWeek import DayOfWeek
+from .DayOfWeek import DayOfWeek
 from .Duration import Duration
 from .MonthOfYear import MonthOfYear
 from .TemporalEntity import TemporalEntity
