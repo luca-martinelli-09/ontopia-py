@@ -57,7 +57,7 @@ streetToponym.addToGraph(g)
 - [ ] https://w3id.org/italia/onto/COV
 - [ ] https://w3id.org/italia/onto/CPEV
 - [ ] https://w3id.org/italia/onto/CPSV
-- [ ] https://w3id.org/italia/onto/CPV
+- [x] https://w3id.org/italia/onto/CPV
 - [ ] https://w3id.org/italia/onto/CulturalHeritage
 - [ ] https://w3id.org/italia/onto/HER
 - [ ] https://w3id.org/italia/onto/Indicator
