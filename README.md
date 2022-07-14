@@ -4,7 +4,6 @@
 [![PyPI version](https://img.shields.io/pypi/v/ontopia-py.svg)](https://pypi.python.org/pypi/ontopia-py/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/ontopia-py.svg)](https://pypi.python.org/pypi/ontopia-py/)
 [![PyPI status](https://img.shields.io/pypi/status/ontopia-py.svg)](https://pypi.python.org/pypi/ontopia-py/)
-[![Downloads](https://pepy.tech/badge/ontopia-py)](https://pepy.tech/project/ontopia-py)
 
 This python package helps in create and implements an [OntoPiA](https://github.com/italia/daf-ontologie-vocabolari-controllati) RDF.
 
