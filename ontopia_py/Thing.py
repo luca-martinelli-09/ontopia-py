@@ -15,7 +15,7 @@ class Thing:
         self._dataset = dataset
         self._titles = titles
 
-        self.uriRef = URIRef(baseUri.uriRef[id])
+        self.uriRef = URIRef(baseUri[id])
 
     def _addProperties(self, g: Graph):
         pass
@@ -27,10 +27,10 @@ class Thing:
             g.add((self.uriRef, DC.title, title))
 
         if self._dataset:
-            g.add((self.uriRef, SKOS.inScheme, self._dataset))
+            g.add((self.uriRef, SKOS.inScheme, self._dataset.uriRef))
 
         if isTopConcept:
             g.add(
-                (self._dataset, SKOS.hasTopConcept, self.uriRef))
+                (self._dataset.uriRef, SKOS.hasTopConcept, self.uriRef))
 
         self._addProperties(g)
