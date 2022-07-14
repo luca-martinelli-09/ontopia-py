@@ -1,4 +1,4 @@
-from ...const import *
+from ...ns import *
 from ..TemporalEntity import TemporalEntity
 
 

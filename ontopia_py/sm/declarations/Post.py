@@ -1,4 +1,4 @@
-from ...const import *
+from ...ns import *
 from ...l0.Object import Object
 
 
