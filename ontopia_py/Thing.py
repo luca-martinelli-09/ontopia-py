@@ -1,0 +1,34 @@
+from typing import List
+
+from rdflib import RDF, Graph, Literal, Namespace, URIRef
+from rdflib.namespace import DC, RDF, SKOS
+
+
+class Thing:
+    _dataset: URIRef = None
+    _titles: List[Literal] = []
+    uriRef: URIRef = None
+
+    def __init__(self, id: str, baseUri: Namespace, dataset: URIRef = None, titles: List[Literal] = []):
+        self._dataset = dataset
+        self._titles = titles
+
+        self.uriRef = URIRef(baseUri[id])
+
+    def _addProperties(self, g: Graph):
+        pass
+
+    def addToGraph(self, g: Graph, isTopConcept=True):
+        g.add((self.uriRef, RDF.type, self.__type__))
+
+        for title in self._titles:
+            g.add((self.uriRef, DC.title, title))
+
+        if self._dataset:
+            g.add((self.uriRef, SKOS.inScheme, self._dataset))
+
+        if isTopConcept:
+            g.add(
+                (self._dataset, SKOS.hasTopConcept, self.uriRef))
+
+        self._addProperties(g)
