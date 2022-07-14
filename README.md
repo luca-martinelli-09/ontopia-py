@@ -51,7 +51,7 @@ streetToponym.addToGraph(g)
 # Ontologies implemented
 
 - [ ] https://w3id.org/italia/onto/ACCO
-- [ ] https://w3id.org/italia/onto/AccessCondition
+- [x] https://w3id.org/italia/onto/AccessCondition
 - [ ] https://w3id.org/italia/onto/AtlasOfPaths
 - [x] https://w3id.org/italia/onto/CLV
 - [ ] https://w3id.org/italia/onto/COV
