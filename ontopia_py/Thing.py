@@ -3,17 +3,19 @@ from typing import List
 from rdflib import RDF, Graph, Literal, Namespace, URIRef
 from rdflib.namespace import DC, RDF, SKOS
 
+from .ConceptScheme import ConceptScheme
+
 
 class Thing:
     _dataset: URIRef = None
     _titles: List[Literal] = []
     uriRef: URIRef = None
 
-    def __init__(self, id: str, baseUri: Namespace, dataset: URIRef = None, titles: List[Literal] = []):
+    def __init__(self, id: str, baseUri: Namespace, dataset: ConceptScheme = None, titles: List[Literal] = []):
         self._dataset = dataset
         self._titles = titles
 
-        self.uriRef = URIRef(baseUri[id])
+        self.uriRef = URIRef(baseUri.uriRef[id])
 
     def _addProperties(self, g: Graph):
         pass
