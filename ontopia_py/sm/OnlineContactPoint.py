@@ -3,15 +3,15 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from .ContactPoint import ContactPoint
+from ..Thing import Thing
+from .declarations.OnlineContactPoint import OnlineContactPoint
 from .Email import Email
 from .Telephone import Telephone
 from .UserAccount import UserAccount
 from .WebSite import WebSite
-from ..Thing import Thing
 
 
-class OnlineContactPoint(ContactPoint):
+class OnlineContactPoint(OnlineContactPoint):
     __type__ = SM["OnlineContactPoint"]
 
     hasEmail: List[Email] = None

@@ -2,7 +2,7 @@ from rdflib import Graph, Literal
 
 from ..ns import *
 from ..l0.Object import Object
-from .OnlineContactPoint import OnlineContactPoint
+from .declarations.OnlineContactPoint import OnlineContactPoint
 from .EmailType import EmailType
 
 
