@@ -6,8 +6,8 @@ from .Organization import Organization
 from .ParticipationType import ParticipationType
 
 
-class Partecipation(TimeIndexedEvent):
-    __type__ = COV["Partecipation"]
+class Participation(TimeIndexedEvent):
+    __type__ = COV["Participation"]
 
     participated: Organization = None
     hasParticipationType: ParticipationType = None
