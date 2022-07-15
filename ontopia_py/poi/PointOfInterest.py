@@ -2,7 +2,8 @@ from typing import List
 
 from rdflib import Graph, Literal
 
-from ..clv.d import Address, Geometry
+from ..clv.d import Address
+from ..clv.Geometry import Geometry
 from ..l0.Entity import Entity
 from ..ns import *
 from ..sm.Image import Image
