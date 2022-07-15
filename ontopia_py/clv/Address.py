@@ -16,7 +16,6 @@ from .InternalAccess import InternalAccess
 from .Province import Province
 from .Region import Region
 from .StreetToponym import StreetToponym
-from ..cpv.Person import Person
 
 
 class Address(Address):
@@ -36,7 +35,6 @@ class Address(Address):
     hasDistrict: List[District] = None
     hasProvince: List[Province] = None
     hasRegion: List[Region] = None
-    isCurrentResidenceOf: List[Person] = None
 
     def _addProperties(self, g: Graph):
         super()._addProperties(g)
