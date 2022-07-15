@@ -4,7 +4,7 @@ from rdflib import Graph, Literal
 
 from ..l0.EventOrSituation import EventOrSituation
 from ..ns import *
-from .Organization import Organization
+from .declarations.Organization import Organization
 
 
 class ChangeEvent(EventOrSituation):
