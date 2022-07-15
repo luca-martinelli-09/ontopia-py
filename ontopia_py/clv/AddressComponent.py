@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from .declarations.AddressComponent import AddressComponent
+from .d import AddressComponent
 
 
 class AddressComponent(AddressComponent):

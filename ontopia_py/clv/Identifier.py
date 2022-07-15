@@ -3,8 +3,8 @@ from typing import List
 from rdflib import Graph, Literal, URIRef
 
 from ..ns import *
-from ..cov.declarations.Organization import Organization
-from .declarations.Identifier import Identifier
+from ..cov.d import Organization
+from .d import Identifier
 
 
 class Identifier(Identifier):

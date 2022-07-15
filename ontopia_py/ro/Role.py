@@ -5,7 +5,7 @@ from rdflib import Graph, Literal
 from ..l0.Entity import Entity
 from ..ns import *
 from ..ro.TimeIndexedRole import TimeIndexedRole
-from .declarations.Role import Role
+from .d import Role
 
 
 class Role(Role):

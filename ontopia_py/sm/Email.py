@@ -1,8 +1,7 @@
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .declarations.Email import Email
-from .declarations.OnlineContactPoint import OnlineContactPoint
+from .d import Email, OnlineContactPoint
 from .EmailType import EmailType
 
 

@@ -1,8 +1,8 @@
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .declarations.OnlineContactPoint import OnlineContactPoint
-from .declarations.Telephone import Telephone
+from .d import OnlineContactPoint
+from .d import Telephone
 from .TelephoneType import TelephoneType
 
 

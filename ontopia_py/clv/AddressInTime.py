@@ -4,8 +4,8 @@ from rdflib import Graph
 
 from ..ns import *
 from ..ti.TimeInterval import TimeInterval
-from .declarations.Address import Address
-from .declarations.AddressInTime import AddressInTime
+from .d import Address
+from .d import AddressInTime
 
 
 class AddressInTime(AddressInTime):

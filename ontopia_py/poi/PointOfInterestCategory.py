@@ -3,22 +3,24 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from ..Thing import Thing
-from .declarations.PointOfInterest import PointOfInterest
+from .d import PointOfInterestCategory
+from .PointOfInterest import PointOfInterest
 
 
-class PointOfInterestCategory(Thing):
+class PointOfInterestCategory(PointOfInterestCategory):
     __type__ = POI["PointOfInterestCategory"]
 
     POIcategoryName: List[Literal] = None
-    isPOICategoryFor: PointOfInterest = None
+    isPOICategoryFor: List[PointOfInterest] = None
 
     def _addProperties(self, g: Graph):
         super()._addProperties(g)
 
-        for POIcategoryName in self.POIcategoryName:
-            g.add((self.uriRef, POI["hasPOICategory"], POIcategoryName))
+        if self.POIcategoryName:
+            for POIcategoryName in self.POIcategoryName:
+                g.add((self.uriRef, POI["POIcategoryName"], POIcategoryName))
 
         if self.isPOICategoryFor:
-            g.add((self.uriRef, POI["isPOICategoryFor"],
-                  self.isPOICategoryFor.uriRef))
+            for isPOICategoryFor in self.isPOICategoryFor:
+                g.add(
+                    (self.uriRef, POI["isPOICategoryFor"], isPOICategoryFor.uriRef))

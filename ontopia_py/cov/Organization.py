@@ -2,8 +2,8 @@ from typing import List
 
 from rdflib import Graph, Literal
 
-from ..clv.declarations.Address import Address
-from ..clv.declarations.Identifier import Identifier
+from ..clv.d import Address
+from ..clv.d import Identifier
 from ..l0.Location import Location
 from ..ns import *
 from ..sm.Image import Image
@@ -12,7 +12,7 @@ from ..Thing import Thing
 from .ActivityType import ActivityType
 from .BalanceSheet import BalanceSheet
 from .ChangeEvent import ChangeEvent
-from .declarations.Organization import Organization
+from .d import Organization
 from .Employment import Employment
 from .LegalStatus import LegalStatus
 from .SupportUnit import SupportUnit

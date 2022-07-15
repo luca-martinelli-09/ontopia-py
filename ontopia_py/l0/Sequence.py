@@ -2,7 +2,7 @@ from rdflib import Graph
 
 from ..ns import *
 from .Collection import Collection
-from .declarations.Entity import Entity
+from .d import Entity
 
 
 class Sequence(Collection):

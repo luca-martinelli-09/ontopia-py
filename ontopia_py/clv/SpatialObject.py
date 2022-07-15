@@ -5,7 +5,7 @@ from rdflib import Graph
 from ..l0.Location import Location
 from ..ns import *
 from ..ti.TimeInterval import TimeInterval
-from .declarations.Identifier import Identifier
+from .d import Identifier
 
 
 class SpatialObject(Location):

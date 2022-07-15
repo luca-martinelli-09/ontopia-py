@@ -5,7 +5,7 @@ from rdflib import Graph, Literal
 from ..clv.Address import Address
 from ..l0.Location import Location
 from ..ns import *
-from .declarations.Person import Person
+from .d import Person
 from .PersonTitle import PersonTitle
 from .ResidenceInTime import ResidenceInTime
 from .Sex import Sex

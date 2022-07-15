@@ -3,8 +3,8 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .declarations.UserAccount import UserAccount
-from .declarations.OnlineContactPoint import OnlineContactPoint
+from .d import UserAccount
+from .d import OnlineContactPoint
 from .SocialMedia import SocialMedia
 from .Post import Post
 

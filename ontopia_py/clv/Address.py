@@ -10,7 +10,7 @@ from .CensusSection import CensusSection
 from .City import City
 from .CivicNumbering import CivicNumbering
 from .Country import Country
-from .declarations.Address import Address
+from .d import Address
 from .District import District
 from .InternalAccess import InternalAccess
 from .Province import Province

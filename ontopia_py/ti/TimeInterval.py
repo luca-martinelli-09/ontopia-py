@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .declarations.TimeInterval import TimeInterval
+from .d import TimeInterval
 from .TimeInstant import TimeInstant
 
 

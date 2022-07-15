@@ -3,8 +3,7 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .declarations.Post import Post
-from .declarations.UserAccount import UserAccount
+from .d import Post, UserAccount
 
 
 class Post(Post):

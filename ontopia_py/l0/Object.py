@@ -1,5 +1,5 @@
 from ..ns import *
-from .declarations.Entity import Entity
+from .d import Entity
 
 
 class Object(Entity):

@@ -4,7 +4,7 @@ from rdflib import Graph
 
 from ..ns import *
 from ..Thing import Thing
-from .declarations.OnlineContactPoint import OnlineContactPoint
+from .d import OnlineContactPoint
 from .Email import Email
 from .Telephone import Telephone
 from .UserAccount import UserAccount
