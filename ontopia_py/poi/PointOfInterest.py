@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph, Literal
 
 # from ..clv import Address
-from ..clv.Geometry import Geometry
+# from ..clv.Geometry import Geometry
 from ..ns import *
 from ..sm.d import Image
 from ..ti.TimeInterval import TimeInterval
@@ -20,7 +20,7 @@ class PointOfInterest(PointOfInterest):
     hasPOINameInITime: List[POINameInTime] = None
     hasImage: List[Image] = None
     atTime: List[TimeInterval] = None
-    hasGeometry: Geometry = None
+    hasGeometry = None # Geometry
     hasPOIState: POIState = None
     isIncludedInPOI: MultiplePointOfInterest = None
     POIofficialName: List[Literal] = None
