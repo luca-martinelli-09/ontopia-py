@@ -3,8 +3,7 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .d import PointOfInterestCategory
-from .PointOfInterest import PointOfInterest
+from .d.poi import PointOfInterest, PointOfInterestCategory
 
 
 class PointOfInterestCategory(PointOfInterestCategory):

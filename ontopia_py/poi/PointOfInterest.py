@@ -7,9 +7,8 @@ from rdflib import Graph, Literal
 from ..ns import *
 # from ..sm.d import Image
 from ..ti.TimeInterval import TimeInterval
-from .d import (POINameInTime,
-                PointOfInterestCategory, POIState)
-from .d.poi import PointOfInterest
+from .d.poi import (POINameInTime, PointOfInterest, PointOfInterestCategory,
+                    POIState)
 
 
 class PointOfInterest(PointOfInterest):
