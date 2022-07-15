@@ -5,7 +5,7 @@ from rdflib import Graph, Literal
 # from ..clv import Address
 # from ..clv.Geometry import Geometry
 from ..ns import *
-from ..sm.d import Image
+# from ..sm.d import Image
 from ..ti.TimeInterval import TimeInterval
 from .d import (MultiplePointOfInterest, POINameInTime,
                 PointOfInterestCategory, POIState)
@@ -18,7 +18,7 @@ class PointOfInterest(PointOfInterest):
     hasPOICategory: List[PointOfInterestCategory] = []
     hasAddress: List = [] # Address
     hasPOINameInITime: List[POINameInTime] = None
-    hasImage: List[Image] = None
+    hasImage: List = None # Image
     atTime: List[TimeInterval] = None
     hasGeometry = None # Geometry
     hasPOIState: POIState = None
