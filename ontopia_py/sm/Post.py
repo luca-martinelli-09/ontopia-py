@@ -4,7 +4,7 @@ from rdflib import Graph, Literal
 
 from ..ns import *
 from .declarations.Post import Post
-from .UserAccount import UserAccount
+from .declarations.UserAccount import UserAccount
 
 
 class Post(Post):
