@@ -3,11 +3,11 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from ..l0.Object import Object
 from ..Thing import Thing
+from .d import Image
 
 
-class Image(Object):
+class Image(Image):
     __type__ = SM["Image"]
 
     isImageOf: List[Thing] = None

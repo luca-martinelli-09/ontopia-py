@@ -3,6 +3,10 @@ from ...ns import *
 from ..ContactPoint import ContactPoint
 
 
+class Image(Object):
+    __type__ = SM["Image"]
+
+
 class Email(Object):
     __type__ = SM["Email"]
 

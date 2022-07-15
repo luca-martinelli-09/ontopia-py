@@ -6,8 +6,7 @@ from ..clv.d import Address
 from ..clv.d.id import Identifier
 from ..l0.Location import Location
 from ..ns import *
-from ..sm.Image import Image
-from ..sm.OnlineContactPoint import OnlineContactPoint
+from ..sm.d import Image, OnlineContactPoint
 from ..Thing import Thing
 from .ActivityType import ActivityType
 from .BalanceSheet import BalanceSheet
