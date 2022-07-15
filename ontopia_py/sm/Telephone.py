@@ -1,12 +1,12 @@
 from rdflib import Graph, Literal
 
 from ..ns import *
-from ..l0.Object import Object
-from .OnlineContactPoint import OnlineContactPoint
+from .declarations.OnlineContactPoint import OnlineContactPoint
+from .declarations.Telephone import Telephone
 from .TelephoneType import TelephoneType
 
 
-class Telephone(Object):
+class Telephone(Telephone):
     __type__ = SM["Telephone"]
 
     hasTelephoneType: TelephoneType = None
