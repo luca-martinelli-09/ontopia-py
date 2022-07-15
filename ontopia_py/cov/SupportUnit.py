@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .Organization import Organization
+from .declarations.Organization import Organization
 
 
 class SupportUnit(Organization):
