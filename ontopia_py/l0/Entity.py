@@ -3,11 +3,9 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from .Collection import Collection
-from .d.Entity import Entity
+from .d import Entity
 from .Description import Description
 from .Sequence import Sequence
-from .Topic import Topic
 
 
 class Entity(Entity):
@@ -18,10 +16,10 @@ class Entity(Entity):
     follows: List[Entity] = None
     hasDescription: List[Description] = None
     hasLastMember: List[Sequence] = None
-    hasTopic: List[Topic] = None
+    hasTopic: List = None  # Topic
     isFirstMemberOf: List[Sequence] = None
     isLastMemberOf: List[Sequence] = None
-    isMemberOf: List[Collection] = None
+    isMemberOf: List = None  # Collection
     precedes: List[Entity] = None
 
     def _addProperties(self, g: Graph):
