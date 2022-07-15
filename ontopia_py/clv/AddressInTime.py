@@ -3,7 +3,6 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from ..Thing import Thing
 from ..ti.TimeInterval import TimeInterval
 from .declarations.Address import Address
 from .declarations.AddressInTime import AddressInTime
@@ -16,7 +15,6 @@ class AddressInTime(AddressInTime):
     nextAddress: List[AddressInTime] = None
     prevAddress: List[AddressInTime] = None
     withAddress: Address = None
-    withAddress: List[Thing] = None
 
     def _addProperties(self, g: Graph):
         super()._addProperties(g)
