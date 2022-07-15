@@ -2,10 +2,10 @@ from typing import List
 
 from rdflib import Graph
 
-from ..ns import *
 from ..l0.Location import Location
+from ..ns import *
 from ..ti.TimeInterval import TimeInterval
-from .Identifier import Identifier
+from .declarations.Identifier import Identifier
 
 
 class SpatialObject(Location):
