@@ -6,7 +6,7 @@ from ..PointOfInterest import PointOfInterest
 
 
 class MultiplePointOfInterest(PointOfInterest):
-    __type__ = CLV["Feature"]
+    __type__ = CLV["MultiplePointOfInterest"]
 
 
 class POINameInTime(EventOrSituation):
