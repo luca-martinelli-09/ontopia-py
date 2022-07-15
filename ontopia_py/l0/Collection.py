@@ -3,10 +3,11 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from .Entity import Entity
+from .d import Collection
+from .d.Entity import Entity
 
 
-class Collection(Entity):
+class Collection(Collection):
     __type__ = L0["Collection"]
 
     hasMember: List[Entity] = None

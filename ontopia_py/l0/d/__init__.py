@@ -1,6 +1,10 @@
 from ...ns import *
-from ...Thing import Thing
+from ..Entity import Entity
 
 
-class Entity(Thing):
-    __type__ = L0["Entity"]
+class Collection(Entity):
+    __type__ = L0["Collection"]
+
+
+class Topic(Entity):
+    __type__ = L0["Topic"]

@@ -3,10 +3,11 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from .Entity import Entity
+from .d import Topic
+from .d.Entity import Entity
 
 
-class Topic(Entity):
+class Topic(Topic):
     __type__ = L0["Topic"]
 
     isTopicOf: List[Entity] = None
