@@ -4,7 +4,7 @@ from rdflib import Graph
 
 from ..ns import *
 from .d import MultiplePointOfInterest
-from .PointOfInterest import PointOfInterest
+from .d.poi import PointOfInterest
 
 
 class MultiplePointOfInterest(MultiplePointOfInterest):

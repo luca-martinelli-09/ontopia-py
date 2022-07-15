@@ -5,7 +5,7 @@ from rdflib import Graph, Literal
 from ..ns import *
 from ..ti.TimeInterval import TimeInterval
 from .d import POINameInTime
-from .PointOfInterest import PointOfInterest
+from .d.poi import PointOfInterest
 
 
 class POINameInTime(POINameInTime):

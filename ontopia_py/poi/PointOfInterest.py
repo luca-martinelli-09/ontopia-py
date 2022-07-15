@@ -4,15 +4,15 @@ from rdflib import Graph, Literal
 
 from ..clv.d import Address
 from ..clv.Geometry import Geometry
-from ..l0.Entity import Entity
 from ..ns import *
 from ..sm.Image import Image
 from ..ti.TimeInterval import TimeInterval
 from .d import (MultiplePointOfInterest, POINameInTime,
                 PointOfInterestCategory, POIState)
+from .d.poi import PointOfInterest
 
 
-class PointOfInterest(Entity):
+class PointOfInterest(PointOfInterest):
     __type__ = POI["PointOfInterest"]
 
     hasPOICategory: List[PointOfInterestCategory] = []
