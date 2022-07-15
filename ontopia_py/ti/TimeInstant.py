@@ -1,6 +1,6 @@
 from typing import List
 
-from rdflib import Graph, Literal, Namespace, URIRef
+from rdflib import Graph, Literal
 
 from ..ns import *
 from .TemporalEntity import TemporalEntity

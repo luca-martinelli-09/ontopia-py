@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph, Literal, URIRef
 
 from ..ns import *
-from ..cov.Organization import Organization
+from ..cov.declarations.Organization import Organization
 from ..l0.Characteristic import Characteristic
 
 

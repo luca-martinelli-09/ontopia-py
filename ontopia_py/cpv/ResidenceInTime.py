@@ -1,6 +1,4 @@
-from typing import List
-
-from rdflib import Graph, Literal
+from rdflib import Graph
 
 from ..ns import *
 from ..ti.TimeIndexedEvent import TimeIndexedEvent
@@ -12,7 +10,7 @@ class ResidenceInTime(TimeIndexedEvent):
     __type__ = CPV["ResidenceInTime"]
 
     residenceInLocation: Address = None
-    isResidenceInTimeOf: Person
+    isResidenceInTimeOf: Person = None
 
     def _addProperties(self, g: Graph):
         super()._addProperties(g)
