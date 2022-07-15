@@ -3,9 +3,11 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
+from .Collection import Collection
 from .d import Entity
 from .Description import Description
 from .Sequence import Sequence
+from .Topic import Topic
 
 
 class Entity(Entity):
