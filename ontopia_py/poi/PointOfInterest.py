@@ -2,7 +2,7 @@ from typing import List
 
 from rdflib import Graph, Literal
 
-from ..clv.d import Address
+# from ..clv import Address
 from ..clv.Geometry import Geometry
 from ..ns import *
 from ..sm.d import Image
@@ -16,7 +16,7 @@ class PointOfInterest(PointOfInterest):
     __type__ = POI["PointOfInterest"]
 
     hasPOICategory: List[PointOfInterestCategory] = []
-    hasAddress: List[Address] = []
+    hasAddress: List = [] # Address
     hasPOINameInITime: List[POINameInTime] = None
     hasImage: List[Image] = None
     atTime: List[TimeInterval] = None
