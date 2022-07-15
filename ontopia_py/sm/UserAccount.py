@@ -3,13 +3,13 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..ns import *
-from ..l0.Object import Object
-from .OnlineContactPoint import OnlineContactPoint
+from .declarations.UserAccount import UserAccount
+from .declarations.OnlineContactPoint import OnlineContactPoint
 from .SocialMedia import SocialMedia
 from .Post import Post
 
 
-class UserAccount(Object):
+class UserAccount(UserAccount):
     __type__ = SM["UserAccount"]
 
     isAccountIssuedBy: SocialMedia = None
