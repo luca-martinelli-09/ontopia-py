@@ -13,6 +13,8 @@ class MeasurementUnit(Characteristic):
     isMeasurementUnitOf: List[Thing] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isMeasurementUnitOf:
             for isMeasurementUnitOf in self.isMeasurementUnitOf:
                 g.add((self.uriRef, MU["isMeasurementUnitOf"],

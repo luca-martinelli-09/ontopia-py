@@ -12,6 +12,8 @@ class AlivePerson(Person):
     age: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasLevelOfEducation:
             g.add(self.uriRef, CPV["hasLevelOfEducation"],
                   self.hasLevelOfEducation.uriRef)

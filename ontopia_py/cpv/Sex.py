@@ -13,6 +13,8 @@ class Sex(Characteristic):
     sexID: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.sexDesc:
             for sexDesc in self.sexDesc:
                 g.add((self.uriRef, CLV["sexDesc"], sexDesc))

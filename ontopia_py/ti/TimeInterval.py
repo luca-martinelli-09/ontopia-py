@@ -16,6 +16,8 @@ class TimeInterval(TimeInterval):
     startTime: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for hasTimeInstantInside in self.hasTimeInstantInside:
             g.add((self.uriRef, TI["hasTimeInstantInside"],
                   hasTimeInstantInside.uriRef))

@@ -15,6 +15,8 @@ class SpatialObject(Location):
     hasSOValidity: List[TimeInterval] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasIdentifier:
             for hasIdentifier in self.hasIdentifier:
                 g.add(

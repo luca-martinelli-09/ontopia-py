@@ -14,6 +14,8 @@ class Review(Post):
     reviewAspect: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasRating:
             for hasRating in self.hasRating:
                 g.add((self.uriRef, SM["hasRating"], hasRating.uriRef))

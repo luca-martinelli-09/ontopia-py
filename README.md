@@ -54,7 +54,7 @@ streetToponym.addToGraph(g)
 - [x] https://w3id.org/italia/onto/AccessCondition
 - [ ] https://w3id.org/italia/onto/AtlasOfPaths
 - [x] https://w3id.org/italia/onto/CLV
-- [ ] https://w3id.org/italia/onto/COV
+- [x] https://w3id.org/italia/onto/COV
 - [ ] https://w3id.org/italia/onto/CPEV
 - [ ] https://w3id.org/italia/onto/CPSV
 - [x] https://w3id.org/italia/onto/CPV
@@ -62,14 +62,14 @@ streetToponym.addToGraph(g)
 - [ ] https://w3id.org/italia/onto/HER
 - [ ] https://w3id.org/italia/onto/Indicator
 - [ ] https://w3id.org/italia/onto/IoT
-- [ ] https://w3id.org/italia/onto/Language
+- [x] https://w3id.org/italia/onto/Language
 - [x] https://w3id.org/italia/onto/MU
 - [ ] https://w3id.org/italia/onto/PARK
 - [ ] https://w3id.org/italia/onto/POI
 - [ ] https://w3id.org/italia/onto/POT
 - [ ] https://w3id.org/italia/onto/Project
 - [ ] https://w3id.org/italia/onto/PublicContract
-- [ ] https://w3id.org/italia/onto/RO
+- [x] https://w3id.org/italia/onto/RO
 - [ ] https://w3id.org/italia/onto/Route
 - [x] https://w3id.org/italia/onto/SM
 - [x] https://w3id.org/italia/onto/TI

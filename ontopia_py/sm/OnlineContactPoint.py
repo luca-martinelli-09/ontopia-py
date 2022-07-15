@@ -22,6 +22,8 @@ class OnlineContactPoint(ContactPoint):
     isOnlineContactPointOf: List[Thing] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasEmail:
             for hasEmail in self.hasEmail:
                 g.add((self.uriRef, SM["hasEmail"], hasEmail.uriRef))

@@ -14,6 +14,8 @@ class DayOfWeek(TemporalEntity):
     day: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for isDayOfWeekOf in self.isDayOfWeekOf:
             g.add((self.uriRef, TI["isDayOfWeekOf"],
                   isDayOfWeekOf.uriRef))

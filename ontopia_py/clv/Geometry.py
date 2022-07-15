@@ -21,6 +21,8 @@ class Geometry(SpatialObject):
     isGeometryFor: List[Thing] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasGeometryType:
             g.add((self.uriRef, CLV["hasGeometryType"],
                   self.hasGeometryType.uriRef))

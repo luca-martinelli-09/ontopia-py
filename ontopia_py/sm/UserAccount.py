@@ -19,6 +19,8 @@ class UserAccount(Object):
     isCreatorOf: List[Post] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isAccountIssuedBy:
             g.add((self.uriRef, SM["isAccountIssuedBy"],
                   self.isAccountIssuedBy.uriRef))

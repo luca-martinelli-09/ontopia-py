@@ -19,6 +19,8 @@ class AddressInTime(AddressInTime):
     withAddress: List[Thing] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.atTime:
             for atTime in self.atTime:
                 g.add(

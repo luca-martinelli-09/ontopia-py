@@ -12,6 +12,8 @@ class WebSite(Object):
     URL: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isWebSiteOf:
             g.add((self.uriRef, SM["isWebSiteOf"], self.isWebSiteOf.uriRef))
 

@@ -18,6 +18,8 @@ class TemporaryClosure(AccessCondition):
     opens: List[Literal] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.atTime:
             for atTime in self.atTime:
                 g.add((self.uriRef, TI["atTime"], atTime.uriRef))

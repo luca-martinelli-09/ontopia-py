@@ -14,6 +14,8 @@ class Rating(Description):
     userRating: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.bestUserRating:
             for bestUserRating in self.bestUserRating:
                 g.add((self.uriRef, SM["bestUserRating"], bestUserRating))

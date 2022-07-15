@@ -15,6 +15,8 @@ class AdmissionType(Characteristic):
     isAdmissionTypeOf: List[Thing]
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isAdmissionTypeOf:
             for isAdmissionTypeOf in self.isAdmissionTypeOf:
                 g.add(

@@ -16,6 +16,8 @@ class Feature(SpatialObject):
     isSpatialCoverageOf: List[Thing] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasGeometry:
             for hasGeometry in self.hasGeometry:
                 g.add((self.uriRef, CLV["hasGeometry"], hasGeometry.uriRef))

@@ -10,5 +10,7 @@ class Description(Object):
     description: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.description:
             g.add((self.uriRef, L0["description"], self.description))

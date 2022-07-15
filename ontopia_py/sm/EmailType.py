@@ -13,6 +13,8 @@ class EmailType(Concept):
     isEmailTypeOf: List[Email] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isEmailTypeOf:
             for isEmailTypeOf in self.isEmailTypeOf:
                 g.add((self.uriRef, SM["isEmailTypeOf"], isEmailTypeOf.uriRef))

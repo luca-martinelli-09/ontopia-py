@@ -13,10 +13,12 @@ class RegisteredFamily(Family):
     numberRegFamilyComponents: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.registeredFamilyID:
             g.add(
-                (self.uriRef, CLV["registeredFamilyID"], self.registeredFamilyID))
+                (self.uriRef, CPV["registeredFamilyID"], self.registeredFamilyID))
 
         if self.numberRegFamilyComponents:
             g.add(
-                (self.uriRef, CLV["numberRegFamilyComponents"], self.numberRegFamilyComponents))
+                (self.uriRef, CPV["numberRegFamilyComponents"], self.numberRegFamilyComponents))

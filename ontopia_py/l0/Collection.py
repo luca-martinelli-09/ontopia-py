@@ -12,6 +12,8 @@ class Collection(Entity):
     hasMember: List[Entity] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasMember:
             for hasMember in self.hasMember:
                 g.add((self.uriRef, L0["hasMember"], hasMember.uriRef))

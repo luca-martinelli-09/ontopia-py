@@ -15,6 +15,8 @@ class ResidenceInTime(TimeIndexedEvent):
     isResidenceInTimeOf: Person
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.residenceInLocation:
             g.add(self.uriRef, CPV["residenceInLocation"],
                   self.residenceInLocation.uriRef)

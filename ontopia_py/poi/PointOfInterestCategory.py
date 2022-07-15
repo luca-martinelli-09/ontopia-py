@@ -14,6 +14,8 @@ class PointOfInterestCategory(Thing):
     isPOICategoryFor: PointOfInterest = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for POIcategoryName in self.POIcategoryName:
             g.add((self.uriRef, POI["hasPOICategory"], POIcategoryName))
 

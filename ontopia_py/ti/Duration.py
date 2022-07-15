@@ -14,6 +14,8 @@ class Duration(TimeInterval):
     duration: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for isDurationOf in self.isDurationOf:
             g.add((self.uriRef, TI["isDurationOf"],
                   isDurationOf.uriRef))

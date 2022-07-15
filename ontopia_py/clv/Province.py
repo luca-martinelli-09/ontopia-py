@@ -12,6 +12,8 @@ class Province(AdminUnitComponent):
     acronym: List[Literal] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.acronym:
             for acronym in self.acronym:
                 g.add((self.uriRef, CLV["acronym"], acronym))

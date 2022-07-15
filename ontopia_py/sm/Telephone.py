@@ -14,6 +14,8 @@ class Telephone(Object):
     telephoneNumber: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasTelephoneType:
             g.add((self.uriRef, SM["hasTelephoneType"],
                   self.hasTelephoneType.uriRef))

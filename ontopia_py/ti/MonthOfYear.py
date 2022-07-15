@@ -14,6 +14,8 @@ class MonthOfYear(TemporalEntity):
     month: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for isMonthOfYearOf in self.isMonthOfYearOf:
             g.add((self.uriRef, TI["isMonthOfYearOf"],
                   isMonthOfYearOf.uriRef))

@@ -15,6 +15,8 @@ class MeasureType(Characteristic):
     isMeasureTypeOf: List(Value) = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasMeasurementUnit:
             for hasMeasurementUnit in self.hasMeasurementUnit:
                 g.add((self.uriRef, MU["hasMeasurementUnit"],

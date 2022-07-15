@@ -19,6 +19,8 @@ class InternalAccess(Characteristic):
     yard: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.refersToExternalAccess:
             for refersToExternalAccess in self.refersToExternalAccess:
                 g.add(

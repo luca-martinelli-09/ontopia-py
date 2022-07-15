@@ -13,6 +13,8 @@ class TelephoneType(Concept):
     isTelephoneTypeOf: List[Telephone] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isTelephoneTypeOf:
             for isTelephoneTypeOf in self.isTelephoneTypeOf:
                 g.add(

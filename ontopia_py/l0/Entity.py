@@ -25,6 +25,8 @@ class Entity(Entity):
     precedes: List[Entity] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.directlyFollows:
             for directlyFollows in self.directlyFollows:
                 g.add(

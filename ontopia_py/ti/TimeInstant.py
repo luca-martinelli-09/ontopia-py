@@ -16,6 +16,8 @@ class TimeInstant(TemporalEntity):
     year: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for fallsInside in self.fallsInside:
             g.add((self.uriRef, TI["fallsInside"],
                   fallsInside.uriRef))

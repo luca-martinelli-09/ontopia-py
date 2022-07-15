@@ -39,6 +39,8 @@ class Person(Person):
     taxCode: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasAddress:
             for hasAddress in self.hasAddress:
                 g.add((self.uriRef, CLV["hasAddress"], hasAddress.uriRef))

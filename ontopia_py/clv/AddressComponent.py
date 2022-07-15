@@ -12,6 +12,8 @@ class AddressComponent(AddressComponent):
     situatedWithin: List[AddressComponent] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.situatedWithin:
             for situatedWithin in self.situatedWithin:
                 g.add(

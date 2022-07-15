@@ -14,6 +14,8 @@ class Email(Object):
     emailAddress: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasEmailType:
             g.add((self.uriRef, SM["hasEmailType"], self.hasEmailType.uriRef))
 

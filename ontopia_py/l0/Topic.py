@@ -13,6 +13,8 @@ class Topic(Entity):
     isTopicOf: List[Entity] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isTopicOf:
             for isTopicOf in self.isTopicOf:
                 g.add((self.uriRef, L0["isTopicOf"],

@@ -16,6 +16,8 @@ class Value(Characteristic):
     value: List[Literal] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasMeasurementUnit:
             for hasMeasurementUnit in self.hasMeasurementUnit:
                 g.add((self.uriRef, MU["hasMeasurementUnit"],

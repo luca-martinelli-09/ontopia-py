@@ -16,6 +16,8 @@ class Post(Post):
     isReplyOf: List[Post] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasCreator:
             g.add((self.uriRef, SM["hasCreator"], self.hasCreator.uriRef))
 

@@ -13,6 +13,8 @@ class CivicNumbering(Characteristic):
     peculiarity: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.streetNumber:
             g.add((self.uriRef, CLV["streetNumber"], self.streetNumber))
 

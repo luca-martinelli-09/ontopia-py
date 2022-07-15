@@ -12,6 +12,8 @@ class AddressArea(AddressComponent):
     name: List[Literal] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.name:
             for name in self.name:
                 g.add((self.uriRef, L0["name"], name))

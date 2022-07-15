@@ -13,5 +13,7 @@ class TimeIndexedEvent(EventOrSituation):
     atTime: List[TimeInterval] = []
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for atTime in self.atTime:
             g.add((self.uriRef, TI["atTime"], atTime.uriRef))

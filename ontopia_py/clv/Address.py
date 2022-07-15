@@ -39,6 +39,8 @@ class Address(Address):
     isCurrentResidenceOf: List[Person] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasAddressComponent:
             for hasAddressComponent in self.hasAddressComponent:
                 g.add(

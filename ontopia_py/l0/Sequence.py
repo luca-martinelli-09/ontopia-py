@@ -12,6 +12,8 @@ class Sequence(Collection):
     hasLastMember: Entity = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasFirstMember:
             g.add((self.uriRef, L0["hasFirstMember"],
                   self.hasFirstMember.uriRef))

@@ -13,6 +13,8 @@ class StreetToponym(AddressComponent):
     toponymQualifier: List[Literal] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.officialStreetName:
             for officialStreetName in self.officialStreetName:
                 g.add(

@@ -14,6 +14,8 @@ class SocialMedia(Object):
     issuesAccount: List[UserAccount] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.socialMediaName:
             g.add((self.uriRef, SM["socialMediaName"], self.socialMediaName))
 

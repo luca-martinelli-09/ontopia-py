@@ -12,7 +12,9 @@ class FamilySheetHolder(Person):
     isFamilySheetHolderOf: List[Person] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.isFamilySheetHolderOf:
             for isFamilySheetHolderOf in self.isFamilySheetHolderOf:
                 g.add(
-                    (self.uriRef, CLV["isFamilySheetHolderOf"], isFamilySheetHolderOf.uriRef))
+                    (self.uriRef, CPV["isFamilySheetHolderOf"], isFamilySheetHolderOf.uriRef))

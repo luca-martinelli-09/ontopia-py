@@ -14,6 +14,8 @@ class Year(TemporalEntity):
     isYearOf: List[Thing] = []
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for isYearOf in self.isYearOf:
             g.add((self.uriRef, TI["isYearOf"], isYearOf.uriRef))
 

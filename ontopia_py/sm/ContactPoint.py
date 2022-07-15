@@ -13,6 +13,8 @@ class ContactPoint(Object):
     available: List[AccessCondition] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.available:
             for available in self.available:
                 g.add((self.uriRef, SM["available"], available.uriRef))

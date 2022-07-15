@@ -13,7 +13,9 @@ class ParentalRelationshipType(Description):
     inRegisteredFamily: List[RegisteredFamily] = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.inRegisteredFamily:
             for inRegisteredFamily in self.inRegisteredFamily:
                 g.add(
-                    (self.uriRef, CLV["inRegisteredFamily"], inRegisteredFamily.uriRef))
+                    (self.uriRef, CPV["inRegisteredFamily"], inRegisteredFamily.uriRef))

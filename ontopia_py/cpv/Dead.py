@@ -13,6 +13,8 @@ class Dead(Person):
     dateOfDeath: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.hasDeathPlace:
             g.add(self.uriRef, CPV["hasDeathPlace"],
                   self.hasDeathPlace.uriRef)

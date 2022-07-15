@@ -15,6 +15,8 @@ class Identifier(Characteristic):
     identifierType: Literal = None
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         if self.issuedBy:
             for issuedBy in self.issuedBy:
                 g.add((self.uriRef, CLV["issuedBy"], issuedBy.uriRef))

@@ -15,6 +15,8 @@ class TemporalEntity(Entity):
     isTemporalEntityOf: List[Thing] = []
 
     def _addProperties(self, g: Graph):
+        super()._addProperties(g)
+
         for hasTimeParameter in self.hasTimeParameter:
             g.add((self.uriRef, TI["hasTimeParameter"],
                   hasTimeParameter.uriRef))
