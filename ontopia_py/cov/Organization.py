@@ -2,7 +2,7 @@ from typing import List
 
 from rdflib import Graph, Literal
 
-from ..clv.Address import Address
+from ..clv.declarations.Address import Address
 from ..clv.Identifier import Identifier
 from ..l0.Location import Location
 from ..ns import *
