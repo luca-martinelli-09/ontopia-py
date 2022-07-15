@@ -3,7 +3,7 @@ from rdflib import Graph, URIRef
 
 from ..Thing import Thing
 from ..ns import *
-from .poiCategory import PointOfInterestCategory
+from .PointOfInterestCategory import PointOfInterestCategory
 from ..clv.Address import Address
 
 
