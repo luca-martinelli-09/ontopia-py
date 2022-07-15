@@ -7,7 +7,7 @@ from .Collection import Collection
 from .declarations.Entity import Entity
 from .Description import Description
 from .Sequence import Sequence
-from .Topic import Topic
+from .declarations.Topic import Topic
 
 
 class Entity(Entity):

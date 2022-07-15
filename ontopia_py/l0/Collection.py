@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph
 
 from ..ns import *
-from .declarations.Entity import Entity
+from .Entity import Entity
 
 
 class Collection(Entity):

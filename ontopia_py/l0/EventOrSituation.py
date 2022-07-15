@@ -1,5 +1,5 @@
 from ..ns import *
-from .declarations.Entity import Entity
+from .Entity import Entity
 
 
 class EventOrSituation(Entity):

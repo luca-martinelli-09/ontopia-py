@@ -1,10 +1,9 @@
 from typing import List
-from xml.dom.minidom import Entity
 
 from rdflib import Graph
 
 from ..ns import *
-from .declarations.Entity import Entity
+from .Entity import Entity
 
 
 class Topic(Entity):
