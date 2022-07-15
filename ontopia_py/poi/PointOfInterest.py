@@ -1,13 +1,13 @@
 from typing import List
 from rdflib import Graph, URIRef
 
-from ..Thing import Thing
+from .declarations.PointOfInterest import PointOfInterest
 from ..ns import *
 from .PointOfInterestCategory import PointOfInterestCategory
 from ..clv.Address import Address
 
 
-class PointOfInterest(Thing):
+class PointOfInterest(PointOfInterest):
     __type__ = POI["PointOfInterest"]
 
     hasPOICategory: List[PointOfInterestCategory] = []

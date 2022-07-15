@@ -4,7 +4,7 @@ from rdflib import Graph, Literal
 
 from ..ns import *
 from ..Thing import Thing
-from .PointOfInterest import PointOfInterest
+from .declarations.PointOfInterest import PointOfInterest
 
 
 class PointOfInterestCategory(Thing):
