@@ -19,8 +19,6 @@ class ConceptScheme:
         self._addProperties(g)
 
     def _addProperties(self, g: Graph):
-        super()._addProperties(g)
-
         if self.label:
             for label in self.label:
                 g.add((self.uriRef, RDFS.label, label))
