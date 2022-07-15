@@ -5,7 +5,7 @@ from rdflib import Graph, Literal
 from ..clv.d import Address
 from ..clv.Geometry import Geometry
 from ..ns import *
-from ..sm.Image import Image
+from ..sm.d import Image
 from ..ti.TimeInterval import TimeInterval
 from .d import (MultiplePointOfInterest, POINameInTime,
                 PointOfInterestCategory, POIState)
