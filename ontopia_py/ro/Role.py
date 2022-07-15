@@ -3,12 +3,12 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..l0.Entity import Entity
-from ..l0.Object import Object
 from ..ns import *
 from ..ro.TimeIndexedRole import TimeIndexedRole
+from .declarations.Role import Role
 
 
-class Role(Object):
+class Role(Role):
     __type__ = RO["Role"]
 
     isRoleIn: List[TimeIndexedRole] = None

@@ -7,7 +7,7 @@ from ..l0.Entity import Entity
 from ..l0.EventOrSituation import EventOrSituation
 from ..ns import *
 from ..ti.TemporalEntity import TemporalEntity
-from .Role import Role
+from .declarations.Role import Role
 
 
 class TimeIndexedRole(EventOrSituation):
