@@ -4,10 +4,10 @@ from rdflib import Graph, Literal, URIRef
 
 from ..ns import *
 from ..cov.declarations.Organization import Organization
-from ..l0.Characteristic import Characteristic
+from .declarations.Identifier import Identifier
 
 
-class Identifier(Characteristic):
+class Identifier(Identifier):
     __type__ = CLV["Identifier"]
 
     issuedBy: List[Organization] = None
