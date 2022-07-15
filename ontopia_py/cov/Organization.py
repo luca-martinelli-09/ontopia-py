@@ -3,7 +3,7 @@ from typing import List
 from rdflib import Graph, Literal
 
 from ..clv.d import Address
-from ..clv.d import Identifier
+from ..clv.d.id import Identifier
 from ..l0.Location import Location
 from ..ns import *
 from ..sm.Image import Image

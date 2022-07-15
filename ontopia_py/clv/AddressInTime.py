@@ -5,7 +5,7 @@ from rdflib import Graph
 from ..ns import *
 from ..ti.TimeInterval import TimeInterval
 from .d import Address
-from .d import AddressInTime
+from .d.id import AddressInTime
 
 
 class AddressInTime(AddressInTime):
