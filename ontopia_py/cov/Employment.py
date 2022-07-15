@@ -2,7 +2,7 @@ from rdflib import Graph, Literal
 
 from ..ns import *
 from ..ro.TimeIndexedRole import TimeIndexedRole
-from .Organization import Organization
+from .declarations.Organization import Organization
 
 
 class Employment(TimeIndexedRole):
