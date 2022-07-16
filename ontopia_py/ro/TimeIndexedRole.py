@@ -1,13 +1,17 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
-from ..l0.Agent import Agent
-from ..l0.Entity import Entity
 from ..l0.EventOrSituation import EventOrSituation
 from ..ns import *
-from ..ti.TemporalEntity import TemporalEntity
-from .d import Role
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..l0.Agent import Agent
+    from ..l0.Entity import Entity
+    from ..ti.TemporalEntity import TemporalEntity
+    from .Role import Role
 
 
 class TimeIndexedRole(EventOrSituation):

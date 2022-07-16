@@ -1,7 +1,12 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
 
-from ..ns import *
+from typing import TYPE_CHECKING
+
 from ..l0.Characteristic import Characteristic
+from ..ns import *
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
 
 
 class CivicNumbering(Characteristic):

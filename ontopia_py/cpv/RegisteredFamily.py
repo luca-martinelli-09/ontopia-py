@@ -1,9 +1,12 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING
 
 from ..ns import *
 from .Family import Family
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
 
 
 class RegisteredFamily(Family):

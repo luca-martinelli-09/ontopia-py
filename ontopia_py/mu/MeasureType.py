@@ -1,11 +1,15 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
-from ..ns import *
 from ..l0.Characteristic import Characteristic
-from .MeasurementUnit import MeasurementUnit
-from .Value import Value
+from ..ns import *
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from .MeasurementUnit import MeasurementUnit
+    from .Value import Value
 
 
 class MeasureType(Characteristic):

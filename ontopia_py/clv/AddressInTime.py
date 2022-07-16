@@ -1,14 +1,20 @@
-from typing import List
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, List
 
 from rdflib import Graph
 
+from ..l0.EventOrSituation import EventOrSituation
 from ..ns import *
-from ..ti.TimeInterval import TimeInterval
-from .d import Address
-from .d.id import AddressInTime
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..ti.TimeInterval import TimeInterval
+    from .Address import Address
 
 
-class AddressInTime(AddressInTime):
+class AddressInTime(EventOrSituation):
     __type__ = CLV["AddressInTime"]
 
     atTime: List[TimeInterval] = None

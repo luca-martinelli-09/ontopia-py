@@ -1,10 +1,14 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
 from .Post import Post
-from .Rating import Rating
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .Rating import Rating
 
 
 class Review(Post):

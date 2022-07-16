@@ -1,8 +1,14 @@
-from rdflib import Graph
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ..ns import *
 from .Collection import Collection
-from .d import Entity
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from .Entity import Entity
 
 
 class Sequence(Collection):

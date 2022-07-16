@@ -1,17 +1,21 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from ..Thing import Thing
-from .d import OnlineContactPoint
-from .Email import Email
-from .Telephone import Telephone
-from .UserAccount import UserAccount
-from .WebSite import WebSite
+from .ContactPoint import ContactPoint
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..Thing import Thing
+    from .Email import Email
+    from .Telephone import Telephone
+    from .UserAccount import UserAccount
+    from .WebSite import WebSite
 
 
-class OnlineContactPoint(OnlineContactPoint):
+class OnlineContactPoint(ContactPoint):
     __type__ = SM["OnlineContactPoint"]
 
     hasEmail: List[Email] = None

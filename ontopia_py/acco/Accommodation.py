@@ -1,12 +1,18 @@
-from typing import List
+"""
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, List
 
 from rdflib import Graph, Literal
 
 from ..ns import *
-from .d import Accommodation
+from ..poi.PointOfInterest import PointOfInterest
+
+if TYPE_CHECKING:
+    from ..l0.Location import Location
 
 
-class Accommodation(Accommodation):
+class Accommodation(PointOfInterest):
     __type__ = ACCO["Accommodation"]
 
     hasSpatialCoverage: List[Location] = None
@@ -147,3 +153,4 @@ class Accommodation(Accommodation):
 
         if self.orgAcronym:
             g.add((self.uriRef, COV["orgAcronym"], self.orgAcronym))
+"""

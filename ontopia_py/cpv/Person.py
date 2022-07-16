@@ -1,17 +1,22 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
-from ..clv.Address import Address
-from ..l0.Location import Location
-from ..ns import *
-from .d import Person
-from .PersonTitle import PersonTitle
-from .ResidenceInTime import ResidenceInTime
-from .Sex import Sex
+from ..l0.Agent import Agent
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..clv.Address import Address
+    from ..l0.Location import Location
+    from ..ns import *
+    from .Person import Person
+    from .PersonTitle import PersonTitle
+    from .ResidenceInTime import ResidenceInTime
+    from .Sex import Sex
 
 
-class Person(Person):
+class Person(Agent):
     __type__ = CPV["Person"]
 
     hasAddress: List[Address] = None

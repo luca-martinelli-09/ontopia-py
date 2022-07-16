@@ -1,9 +1,15 @@
-from rdflib import Graph
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ..ns import *
 from ..ti.TimeIndexedEvent import TimeIndexedEvent
-from ..clv.Address import Address
-from .Person import Person
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..clv.Address import Address
+    from .Person import Person
 
 
 class ResidenceInTime(TimeIndexedEvent):

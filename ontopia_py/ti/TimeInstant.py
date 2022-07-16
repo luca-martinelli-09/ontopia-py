@@ -1,10 +1,14 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
 from .TemporalEntity import TemporalEntity
-from .TimeInterval import TimeInterval
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .TimeInterval import TimeInterval
 
 
 class TimeInstant(TemporalEntity):

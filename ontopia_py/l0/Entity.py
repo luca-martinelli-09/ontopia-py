@@ -1,14 +1,20 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from .d import Entity
-from .Description import Description
-from .Sequence import Sequence
+from ..Thing import Thing
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from .Collection import Collection
+    from .Description import Description
+    from .Sequence import Sequence
+    from .Topic import Topic
 
 
-class Entity(Entity):
+class Entity(Thing):
     __type__ = L0["Entity"]
 
     directlyFollows: List[Entity] = None
@@ -16,10 +22,10 @@ class Entity(Entity):
     follows: List[Entity] = None
     hasDescription: List[Description] = None
     hasLastMember: List[Sequence] = None
-    hasTopic: List = None  # Topic
+    hasTopic: List[Topic] = None
     isFirstMemberOf: List[Sequence] = None
     isLastMemberOf: List[Sequence] = None
-    isMemberOf: List = None  # Collection
+    isMemberOf: List[Collection] = None
     precedes: List[Entity] = None
 
     def _addProperties(self, g: Graph):

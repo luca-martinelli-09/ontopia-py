@@ -1,11 +1,17 @@
-from typing import List
+from __future__ import annotations
+
+from typing import TYPE_CHECKING, List
 
 from rdflib import Graph
 
 from ..l0.Location import Location
 from ..ns import *
-from ..ti.TimeInterval import TimeInterval
-from .d.id import Identifier
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..ti.TimeInterval import TimeInterval
+    from .Identifier import Identifier
 
 
 class SpatialObject(Location):

@@ -1,5 +1,5 @@
 from ..ns import *
-from .d import Entity
+from .Entity import Entity
 
 
 class Object(Entity):

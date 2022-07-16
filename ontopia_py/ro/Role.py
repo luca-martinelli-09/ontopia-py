@@ -1,14 +1,18 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
-from ..l0.Entity import Entity
+from ..l0.Object import Object
 from ..ns import *
-from ..ro.TimeIndexedRole import TimeIndexedRole
-from .d import Role
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..l0.Entity import Entity
+    from ..ro.TimeIndexedRole import TimeIndexedRole
 
 
-class Role(Role):
+class Role(Object):
     __type__ = RO["Role"]
 
     isRoleIn: List[TimeIndexedRole] = None

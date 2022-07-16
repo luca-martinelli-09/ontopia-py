@@ -1,15 +1,19 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
+from ..l0.Object import Object
 from ..ns import *
-from .d import UserAccount
-from .d import OnlineContactPoint
-from .SocialMedia import SocialMedia
-from .Post import Post
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .OnlineContactPoint import OnlineContactPoint
+    from .Post import Post
+    from .SocialMedia import SocialMedia
 
 
-class UserAccount(UserAccount):
+class UserAccount(Object):
     __type__ = SM["UserAccount"]
 
     isAccountIssuedBy: SocialMedia = None

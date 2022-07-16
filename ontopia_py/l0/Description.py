@@ -1,7 +1,12 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ..ns import *
 from .Object import Object
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
 
 
 class Description(Object):

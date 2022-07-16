@@ -1,8 +1,14 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ..l0.Object import Object
 from ..ns import *
-from ..ti.Year import Year
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..ti.Year import Year
 
 
 class BalanceSheet(Object):

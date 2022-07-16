@@ -1,12 +1,17 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
+from ..l0.Characteristic import Characteristic
 from ..ns import *
-from .d.poi import PointOfInterest, POIState
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .PointOfInterest import PointOfInterest
 
 
-class POIState(POIState):
+class POIState(Characteristic):
     __type__ = POI["POIState"]
 
     POIstate: List[Literal] = None

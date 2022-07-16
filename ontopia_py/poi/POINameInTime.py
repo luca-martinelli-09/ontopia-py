@@ -1,13 +1,18 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
+from ..l0.EventOrSituation import EventOrSituation
 from ..ns import *
-from ..ti.TimeInterval import TimeInterval
-from .d.poi import PointOfInterest, POINameInTime
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..ti.TimeInterval import TimeInterval
+    from .PointOfInterest import PointOfInterest
 
 
-class POINameInTime(POINameInTime):
+class POINameInTime(EventOrSituation):
     __type__ = POI["POINameInTime"]
 
     isPOINameInTimeFor: PointOfInterest = None

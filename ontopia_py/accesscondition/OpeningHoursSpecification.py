@@ -1,12 +1,16 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from ..ti.DayOfWeek import DayOfWeek
-from ..ti.TimeInterval import TimeInterval
 from .AccessCondition import AccessCondition
-from .AdmissionType import AdmissionType
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..ti.DayOfWeek import DayOfWeek
+    from ..ti.TimeInterval import TimeInterval
+    from .AdmissionType import AdmissionType
 
 
 class OpeningHoursSpecification(AccessCondition):

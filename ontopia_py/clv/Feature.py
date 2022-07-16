@@ -1,11 +1,15 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from ..Thing import Thing
-from .Geometry import Geometry
 from .SpatialObject import SpatialObject
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..Thing import Thing
+    from .Geometry import Geometry
 
 
 class Feature(SpatialObject):

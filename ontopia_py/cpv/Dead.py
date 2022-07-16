@@ -1,8 +1,14 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
 
-from ..l0.Location import Location
+from typing import TYPE_CHECKING
+
 from ..ns import *
 from .Person import Person
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..l0.Location import Location
 
 
 class Dead(Person):

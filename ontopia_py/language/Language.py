@@ -1,11 +1,15 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
-from ..clv.Country import Country
 from ..l0.Characteristic import Characteristic
 from ..ns import *
-from ..Thing import Thing
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..clv.Country import Country
+    from ..Thing import Thing
 
 
 class Language(Characteristic):

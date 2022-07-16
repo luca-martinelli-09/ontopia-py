@@ -1,12 +1,20 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from rdflib import Graph, Literal
 
+from ..l0.Object import Object
 from ..ns import *
-from .d import OnlineContactPoint
-from .d import Telephone
-from .TelephoneType import TelephoneType
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .OnlineContactPoint import OnlineContactPoint
+    from .TelephoneType import TelephoneType
 
 
-class Telephone(Telephone):
+class Telephone(Object):
     __type__ = SM["Telephone"]
 
     hasTelephoneType: TelephoneType = None

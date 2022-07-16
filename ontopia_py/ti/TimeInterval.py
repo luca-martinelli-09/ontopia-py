@@ -1,13 +1,17 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from .d import TimeInterval
-from .TimeInstant import TimeInstant
+from .TemporalEntity import TemporalEntity
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .TimeInstant import TimeInstant
 
 
-class TimeInterval(TimeInterval):
+class TimeInterval(TemporalEntity):
     __type__ = TI["TimeInterval"]
 
     hasTimeInstantInside: List[TimeInstant] = []

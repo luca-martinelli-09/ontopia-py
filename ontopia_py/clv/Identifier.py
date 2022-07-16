@@ -1,17 +1,21 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal, URIRef
+from typing import TYPE_CHECKING, List
 
-from ..cov.d import Organization
+from ..l0 import Characteristic
 from ..ns import *
-from .d.id import Identifier
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..cov.Organization import Organization
 
 
-class Identifier(Identifier):
+class Identifier(Characteristic):
     __type__ = CLV["Identifier"]
 
     issuedBy: List[Organization] = None
-    identifier: URIRef = None
+    identifier: Literal = None
     identifierType: Literal = None
 
     def _addProperties(self, g: Graph):

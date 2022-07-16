@@ -1,12 +1,17 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
+from ..l0.Topic import Topic
 from ..ns import *
-from .d.poi import PointOfInterest, PointOfInterestCategory
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .PointOfInterest import PointOfInterest
 
 
-class PointOfInterestCategory(PointOfInterestCategory):
+class PointOfInterestCategory(Topic):
     __type__ = POI["PointOfInterestCategory"]
 
     POIcategoryName: List[Literal] = None

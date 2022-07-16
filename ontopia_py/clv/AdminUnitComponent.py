@@ -1,9 +1,12 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
 from .AddressComponent import AddressComponent
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
 
 
 class AdminUnitComponent(AddressComponent):
@@ -25,11 +28,12 @@ class AdminUnitComponent(AddressComponent):
         if self.hasDirectHigherRank:
             for hasDirectHigherRank in self.hasDirectHigherRank:
                 g.add(
-                (self.uriRef, CLV["hasDirectHigherRank"], hasDirectHigherRank))
+                    (self.uriRef, CLV["hasDirectHigherRank"], hasDirectHigherRank))
 
         if self.hasDirectLowerRank:
             for hasDirectLowerRank in self.hasDirectLowerRank:
-                g.add((self.uriRef, CLV["hasDirectLowerRank"], hasDirectLowerRank))
+                g.add(
+                    (self.uriRef, CLV["hasDirectLowerRank"], hasDirectLowerRank))
 
         if self.hasHigherRank:
             for hasHigherRank in self.hasHigherRank:

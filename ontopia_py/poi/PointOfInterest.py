@@ -1,27 +1,34 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
-# from ..clv import Address
-# from ..clv.Geometry import Geometry
+from ..l0.Entity import Entity
 from ..ns import *
-# from ..sm.d import Image
-from ..ti.TimeInterval import TimeInterval
-from .d.poi import (POINameInTime, PointOfInterest, PointOfInterestCategory,
-                    POIState)
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..clv.Address import Address
+    from ..clv.Geometry import Geometry
+    from ..sm.Image import Image
+    from ..ti.TimeInterval import TimeInterval
+    from .MultiplePointOfInterest import MultiplePointOfInterest
+    from .POINameInTime import POINameInTime
+    from .PointOfInterestCategory import PointOfInterestCategory
+    from .POIState import POIState
 
 
-class PointOfInterest(PointOfInterest):
+class PointOfInterest(Entity):
     __type__ = POI["PointOfInterest"]
 
     hasPOICategory: List[PointOfInterestCategory] = []
-    hasAddress: List = []  # Address
+    hasAddress: List[Address] = []
     hasPOINameInITime: List[POINameInTime] = None
-    hasImage: List = None  # Image
+    hasImage: List[Image] = None
     atTime: List[TimeInterval] = None
-    hasGeometry = None  # Geometry
+    hasGeometry: Geometry = None
     hasPOIState: POIState = None
-    isIncludedInPOI = None  # MultiplePointOfInterest
+    isIncludedInPOI: MultiplePointOfInterest = None
     POIofficialName: List[Literal] = None
     POIdescription: List[Literal] = None
     POIID: Literal = None

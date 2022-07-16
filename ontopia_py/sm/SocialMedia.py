@@ -1,10 +1,14 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
-from ..ns import *
 from ..l0.Object import Object
-from .UserAccount import UserAccount
+from ..ns import *
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .UserAccount import UserAccount
 
 
 class SocialMedia(Object):

@@ -1,23 +1,28 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
-from ..clv.d import Address
-from ..clv.d.id import Identifier
-from ..l0.Location import Location
-from ..ns import *
-from ..sm.d import Image, OnlineContactPoint
-from ..Thing import Thing
-from .ActivityType import ActivityType
-from .BalanceSheet import BalanceSheet
-from .ChangeEvent import ChangeEvent
-from .d import Organization
-from .Employment import Employment
-from .LegalStatus import LegalStatus
-from .SupportUnit import SupportUnit
+from ..l0.Agent import Agent
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from ..clv.Address import Address
+    from ..clv.Identifier import Identifier
+    from ..l0.Location import Location
+    from ..ns import *
+    from ..sm.Image import Image
+    from ..sm.OnlineContactPoint import OnlineContactPoint
+    from ..Thing import Thing
+    from .ActivityType import ActivityType
+    from .BalanceSheet import BalanceSheet
+    from .ChangeEvent import ChangeEvent
+    from .Employment import Employment
+    from .LegalStatus import LegalStatus
+    from .SupportUnit import SupportUnit
 
 
-class Organization(Organization):
+class Organization(Agent):
     __type__ = COV["Organization"]
 
     hasSpatialCoverage: List[Location] = None

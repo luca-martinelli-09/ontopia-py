@@ -1,10 +1,14 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
-from ..ns import *
 from ..l0.Concept import Concept
-from .Telephone import Telephone
+from ..ns import *
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from .Telephone import Telephone
 
 
 class TelephoneType(Concept):

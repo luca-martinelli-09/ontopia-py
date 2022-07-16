@@ -1,9 +1,12 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
 from .Organization import Organization
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
 
 
 class SupportUnit(Organization):

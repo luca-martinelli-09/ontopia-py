@@ -1,12 +1,15 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from .d import AddressComponent
+from .Feature import Feature
+
+if TYPE_CHECKING:
+    from rdflib import Graph
 
 
-class AddressComponent(AddressComponent):
+class AddressComponent(Feature):
     __type__ = CLV["AddressComponent"]
 
     situatedWithin: List[AddressComponent] = None

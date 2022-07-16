@@ -1,13 +1,15 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from .d import MultiplePointOfInterest
-from .d.poi import PointOfInterest
+from .PointOfInterest import PointOfInterest
+
+if TYPE_CHECKING:
+    from rdflib import Graph
 
 
-class MultiplePointOfInterest(MultiplePointOfInterest):
+class MultiplePointOfInterest(PointOfInterest):
     __type__ = POI["MultiplePointOfInterest"]
 
     includesPOI: List[PointOfInterest] = None

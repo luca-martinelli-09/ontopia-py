@@ -1,11 +1,20 @@
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
+
 from rdflib import Graph, Literal
 
+from ..l0.Object import Object
 from ..ns import *
-from .d import Email, OnlineContactPoint
-from .EmailType import EmailType
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .EmailType import EmailType
+    from .OnlineContactPoint import OnlineContactPoint
 
 
-class Email(Email):
+class Email(Object):
     __type__ = SM["Email"]
 
     hasEmailType: EmailType = None

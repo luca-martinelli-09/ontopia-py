@@ -1,8 +1,14 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
 
-from ..ns import *
+from typing import TYPE_CHECKING
+
 from ..l0.Object import Object
-from .OnlineContactPoint import OnlineContactPoint
+from ..ns import *
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .OnlineContactPoint import OnlineContactPoint
 
 
 class WebSite(Object):

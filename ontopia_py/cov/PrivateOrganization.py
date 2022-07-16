@@ -1,10 +1,14 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
 from .Organization import Organization
-from .PrivateOrgActivityType import PrivateOrgActivityType
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .PrivateOrgActivityType import PrivateOrgActivityType
 
 
 class PrivateOrganization(Organization):

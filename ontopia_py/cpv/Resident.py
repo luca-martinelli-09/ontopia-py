@@ -1,11 +1,15 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
-from ..clv.Address import Address
 from ..ns import *
 from .AlivePerson import AlivePerson
-from .Family import Family
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..clv.Address import Address
+    from .Family import Family
 
 
 class Resident(AlivePerson):

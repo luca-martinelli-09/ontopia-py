@@ -1,24 +1,28 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
 from ..ns import *
-from .AddressArea import AddressArea
-from .AddressComponent import AddressComponent
-from .AddressInTime import AddressInTime
-from .CensusSection import CensusSection
-from .City import City
-from .CivicNumbering import CivicNumbering
-from .Country import Country
-from .d import Address
-from .District import District
-from .InternalAccess import InternalAccess
-from .Province import Province
-from .Region import Region
-from .StreetToponym import StreetToponym
+from .Feature import Feature
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .AddressArea import AddressArea
+    from .AddressComponent import AddressComponent
+    from .AddressInTime import AddressInTime
+    from .CensusSection import CensusSection
+    from .City import City
+    from .CivicNumbering import CivicNumbering
+    from .Country import Country
+    from .District import District
+    from .InternalAccess import InternalAccess
+    from .Province import Province
+    from .Region import Region
+    from .StreetToponym import StreetToponym
 
 
-class Address(Address):
+class Address(Feature):
     __type__ = CLV["Address"]
 
     hasAddressComponent: List[AddressComponent] = None

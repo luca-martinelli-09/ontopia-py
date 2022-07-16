@@ -1,13 +1,17 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph
+from typing import TYPE_CHECKING, List
 
+from ..l0.Object import Object
 from ..ns import *
-from ..Thing import Thing
-from .d import Image
+
+if TYPE_CHECKING:
+    from rdflib import Graph
+
+    from ..Thing import Thing
 
 
-class Image(Image):
+class Image(Object):
     __type__ = SM["Image"]
 
     isImageOf: List[Thing] = None

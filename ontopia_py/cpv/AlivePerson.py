@@ -1,8 +1,14 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ..ns import *
-from .EducationLevel import EducationLevel
 from .Person import Person
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+from .EducationLevel import EducationLevel
 
 
 class AlivePerson(Person):

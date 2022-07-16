@@ -1,12 +1,17 @@
-from typing import List
+from __future__ import annotations
 
-from rdflib import Graph, Literal
+from typing import TYPE_CHECKING, List
 
+from ..l0.Object import Object
 from ..ns import *
-from .d import Post, UserAccount
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .UserAccount import UserAccount
 
 
-class Post(Post):
+class Post(Object):
     __type__ = SM["Post"]
 
     hasCreator: UserAccount = None

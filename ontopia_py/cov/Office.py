@@ -1,9 +1,15 @@
-from rdflib import Graph, Literal
+from __future__ import annotations
+
+from typing import TYPE_CHECKING
 
 from ..ns import *
-from .eInvoiceService import eInvoiceService
-from .HomogeneousOrganizationalArea import HomogeneousOrganizationalArea
 from .SupportUnit import SupportUnit
+
+if TYPE_CHECKING:
+    from rdflib import Graph, Literal
+
+    from .eInvoiceService import eInvoiceService
+    from .HomogeneousOrganizationalArea import HomogeneousOrganizationalArea
 
 
 class Office(SupportUnit):
