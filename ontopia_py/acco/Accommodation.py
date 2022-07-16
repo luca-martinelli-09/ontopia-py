@@ -22,6 +22,7 @@ if TYPE_CHECKING:
 class Accommodation(PointOfInterest):
     __type__ = ACCO["Accommodation"]
 
+    accommodationCode: List[Literal] = None
     hasAccommodationTypology: List[AccommodationTypology] = None
     hasAccommodationRoom: List[AccommodationRoom] = None
     hasOfferedServiceDescription: List[OfferedServiceDescription] = None
@@ -39,6 +40,11 @@ class Accommodation(PointOfInterest):
 
     def _addProperties(self, g: Graph):
         super()._addProperties(g)
+
+        if self.accommodationCode:
+            for accommodationCode in self.accommodationCode:
+                g.add(
+                    (self.uriRef, ACCO["accommodationCode"], accommodationCode))
 
         if self.hasAccommodationTypology:
             for hasAccommodationTypology in self.hasAccommodationTypology:
