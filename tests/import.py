@@ -1,7 +1,2 @@
 # %%
-from ontopia_py.poi import *
-
-poi = PointOfInterest(
-  id="test"
-)
-# %%
+from ontopia_py.l0 import *
