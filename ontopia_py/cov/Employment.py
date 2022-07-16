@@ -21,9 +21,9 @@ class Employment(TimeIndexedRole):
         super()._addProperties(g)
 
         if self.employmentFor:
-            g.add(self.uriRef, COV["employmentFor"],
-                  self.employmentFor.uriRef)
+            g.add((self.uriRef, COV["employmentFor"],
+                  self.employmentFor.uriRef))
 
         if self.remuneration:
-            g.add(self.uriRef, COV["remuneration"],
-                  self.remuneration)
+            g.add((self.uriRef, COV["remuneration"],
+                  self.remuneration))

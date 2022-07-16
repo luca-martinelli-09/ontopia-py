@@ -26,5 +26,5 @@ class Resident(AlivePerson):
                 g.add((self.uriRef, CPV["belongsToFamily"], belongsToFamily))
 
         if self.hasCurrentResidence:
-            g.add(self.uriRef, CPV["hasCurrentResidence"],
-                  self.hasCurrentResidence.uriRef)
+            g.add((self.uriRef, CPV["hasCurrentResidence"],
+                  self.hasCurrentResidence.uriRef))

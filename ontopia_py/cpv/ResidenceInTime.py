@@ -22,9 +22,9 @@ class ResidenceInTime(TimeIndexedEvent):
         super()._addProperties(g)
 
         if self.residenceInLocation:
-            g.add(self.uriRef, CPV["residenceInLocation"],
-                  self.residenceInLocation.uriRef)
+            g.add((self.uriRef, CPV["residenceInLocation"],
+                  self.residenceInLocation.uriRef))
 
         if self.isResidenceInTimeOf:
-            g.add(self.uriRef, CPV["isResidenceInTimeOf"],
-                  self.isResidenceInTimeOf.uriRef)
+            g.add((self.uriRef, CPV["isResidenceInTimeOf"],
+                  self.isResidenceInTimeOf.uriRef))

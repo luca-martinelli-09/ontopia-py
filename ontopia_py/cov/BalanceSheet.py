@@ -22,10 +22,10 @@ class BalanceSheet(Object):
         super()._addProperties(g)
 
         if self.hasYear:
-            g.add(self.uriRef, TI["hasYear"], self.hasYear.uriRef)
+            g.add((self.uriRef, TI["hasYear"], self.hasYear.uriRef))
 
         if self.totalAmount:
-            g.add(self.uriRef, COV["totalAmount"], self.totalAmount)
+            g.add((self.uriRef, COV["totalAmount"], self.totalAmount))
 
         if self.totalTaxBurden:
-            g.add(self.uriRef, COV["totalTaxBurden"], self.totalTaxBurden)
+            g.add((self.uriRef, COV["totalTaxBurden"], self.totalTaxBurden))

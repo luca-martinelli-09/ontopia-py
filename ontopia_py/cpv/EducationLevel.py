@@ -24,4 +24,4 @@ class EducationLevel(Characteristic):
                     (self.uriRef, CPV["educationLevelDesc"], educationLevelDesc))
 
         if self.educationLevelID:
-            g.add(self.uriRef, CPV["educationLevelID"], self.educationLevelID)
+            g.add((self.uriRef, CPV["educationLevelID"], self.educationLevelID))

@@ -21,8 +21,8 @@ class AlivePerson(Person):
         super()._addProperties(g)
 
         if self.hasLevelOfEducation:
-            g.add(self.uriRef, CPV["hasLevelOfEducation"],
-                  self.hasLevelOfEducation.uriRef)
+            g.add((self.uriRef, CPV["hasLevelOfEducation"],
+                  self.hasLevelOfEducation.uriRef))
 
         if self.age:
-            g.add(self.uriRef, CPV["age"], self.age)
+            g.add((self.uriRef, CPV["age"], self.age))

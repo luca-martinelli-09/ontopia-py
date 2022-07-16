@@ -23,4 +23,4 @@ class Sex(Characteristic):
                 g.add((self.uriRef, CLV["sexDesc"], sexDesc))
 
         if self.sexID:
-            g.add(self.uriRef, CPV["sexID"], self.sexID)
+            g.add((self.uriRef, CPV["sexID"], self.sexID))

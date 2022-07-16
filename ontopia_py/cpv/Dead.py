@@ -22,11 +22,11 @@ class Dead(Person):
         super()._addProperties(g)
 
         if self.hasDeathPlace:
-            g.add(self.uriRef, CPV["hasDeathPlace"],
-                  self.hasDeathPlace.uriRef)
+            g.add((self.uriRef, CPV["hasDeathPlace"],
+                  self.hasDeathPlace.uriRef))
 
         if self.ageWhenDead:
-            g.add(self.uriRef, CPV["ageWhenDead"], self.ageWhenDead)
+            g.add((self.uriRef, CPV["ageWhenDead"], self.ageWhenDead))
 
         if self.dateOfDeath:
-            g.add(self.uriRef, CPV["dateOfDeath"], self.dateOfDeath)
+            g.add((self.uriRef, CPV["dateOfDeath"], self.dateOfDeath))

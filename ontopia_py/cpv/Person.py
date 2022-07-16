@@ -114,22 +114,22 @@ class Person(Agent):
                     (self.uriRef, CPV["hasCitizenship"], hasCitizenship.uriRef))
 
         if self.hasBirthPlace:
-            g.add(self.uriRef, CPV["hasBirthPlace"], self.hasBirthPlace.uriRef)
+            g.add((self.uriRef, CPV["hasBirthPlace"], self.hasBirthPlace.uriRef))
 
         if self.dateOfBirth:
-            g.add(self.uriRef, CPV["dateOfBirth"], self.dateOfBirth)
+            g.add((self.uriRef, CPV["dateOfBirth"], self.dateOfBirth))
 
         if self.personID:
-            g.add(self.uriRef, CPV["personID"], self.personID)
+            g.add((self.uriRef, CPV["personID"], self.personID))
 
         if self.altName:
-            g.add(self.uriRef, CPV["altName"], self.altName)
+            g.add((self.uriRef, CPV["altName"], self.altName))
 
         if self.familyName:
-            g.add(self.uriRef, CPV["familyName"], self.familyName)
+            g.add((self.uriRef, CPV["familyName"], self.familyName))
 
         if self.givenName:
-            g.add(self.uriRef, CPV["givenName"], self.givenName)
+            g.add((self.uriRef, CPV["givenName"], self.givenName))
 
         if self.taxCode:
-            g.add(self.uriRef, CPV["taxCode"], self.taxCode)
+            g.add((self.uriRef, CPV["taxCode"], self.taxCode))

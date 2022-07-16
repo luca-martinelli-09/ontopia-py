@@ -20,13 +20,13 @@ class eInvoiceService(Object):
         super()._addProperties(g)
 
         if self.eInvoiceServiceStartingDate:
-            g.add(self.uriRef, COV["eInvoiceServiceStartingDate"],
-                  self.eInvoiceServiceStartingDate)
+            g.add((self.uriRef, COV["eInvoiceServiceStartingDate"],
+                  self.eInvoiceServiceStartingDate))
 
         if self.taxCodeEInvoiceService:
-            g.add(self.uriRef, COV["taxCodeEInvoiceService"],
-                  self.taxCodeEInvoiceService)
+            g.add((self.uriRef, COV["taxCodeEInvoiceService"],
+                  self.taxCodeEInvoiceService))
 
         if self.taxCodeValidationDate:
-            g.add(self.uriRef, COV["taxCodeValidationDate"],
-                  self.taxCodeValidationDate)
+            g.add((self.uriRef, COV["taxCodeValidationDate"],
+                  self.taxCodeValidationDate))
