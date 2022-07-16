@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, List
 
 from ..l0.Agent import Agent
+from ..ns import *
 
 if TYPE_CHECKING:
     from rdflib import Graph, Literal
@@ -10,7 +11,6 @@ if TYPE_CHECKING:
     from ..clv.Address import Address
     from ..clv.Identifier import Identifier
     from ..l0.Location import Location
-    from ..ns import *
     from ..sm.Image import Image
     from ..sm.OnlineContactPoint import OnlineContactPoint
     from ..Thing import Thing
