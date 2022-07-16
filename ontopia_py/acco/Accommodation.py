@@ -9,20 +9,20 @@ if TYPE_CHECKING:
     from rdflib import Graph, Literal
 
     from ..l0.Agent import Agent
-    from ..l0.Location import Location
     from ..pot.Offer import Offer
     from ..sm.OnlineContactPoint import OnlineContactPoint
     from ..sm.Review import Review
     from .AccommodationChain import AccommodationChain
     from .AccommodationRoom import AccommodationRoom
     from .AccommodationStarRating import AccommodationStarRating
+    from .AccommodationTypology import AccommodationTypology
     from .OfferedServiceDescription import OfferedServiceDescription
 
 
 class Accommodation(PointOfInterest):
     __type__ = ACCO["Accommodation"]
 
-    hasAccommodationTypology: List[Location] = None
+    hasAccommodationTypology: List[AccommodationTypology] = None
     hasAccommodationRoom: List[AccommodationRoom] = None
     hasOfferedServiceDescription: List[OfferedServiceDescription] = None
     isIncludedInAccommodation: List[AccommodationChain] = None
