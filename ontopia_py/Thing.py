@@ -20,7 +20,7 @@ class Thing:
     def _addProperties(self, g: Graph):
         pass
 
-    def addToGraph(self, g: Graph, isTopConcept=True):
+    def addToGraph(self, g: Graph, isTopConcept=False):
         g.add((self.uriRef, RDF.type, self.__type__))
 
         for title in self._titles:
