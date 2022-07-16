@@ -3,13 +3,13 @@ from __future__ import annotations
 from typing import TYPE_CHECKING, List
 
 from ..l0.Agent import Agent
+from ..ns import *
 
 if TYPE_CHECKING:
     from rdflib import Graph, Literal
 
     from ..clv.Address import Address
     from ..l0.Location import Location
-    from ..ns import *
     from .Person import Person
     from .PersonTitle import PersonTitle
     from .ResidenceInTime import ResidenceInTime
