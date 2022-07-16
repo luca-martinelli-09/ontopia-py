@@ -60,10 +60,6 @@ class PointOfInterest(Entity):
                 g.add(
                     (self.uriRef, TI["atTime"], atTime.uriRef))
 
-        if self.hasPOICategory:
-            g.add((self.uriRef, POI["hasPOICategory"],
-                  self.hasPOICategory.uriRef))
-
         if self.hasGeometry:
             g.add((self.uriRef, CLV["hasGeometry"], self.hasGeometry.uriRef))
 
@@ -73,9 +69,6 @@ class PointOfInterest(Entity):
         if self.isIncludedInPOI:
             g.add((self.uriRef, CLV["isIncludedInPOI"],
                   self.isIncludedInPOI.uriRef))
-
-        if self.hasGeometry:
-            g.add((self.uriRef, CLV["hasGeometry"], self.hasGeometry.uriRef))
 
         if self.POIofficialName:
             for POIofficialName in self.POIofficialName:
