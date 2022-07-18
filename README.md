@@ -61,7 +61,7 @@ streetToponym.addToGraph(g)
 - [ ] https://w3id.org/italia/onto/CulturalHeritage
 - [ ] https://w3id.org/italia/onto/HER
 - [ ] https://w3id.org/italia/onto/Indicator
-- [ ] https://w3id.org/italia/onto/IoT
+- [x] https://w3id.org/italia/onto/IoT
 - [x] https://w3id.org/italia/onto/Language
 - [x] https://w3id.org/italia/onto/MU
 - [ ] https://w3id.org/italia/onto/PARK
