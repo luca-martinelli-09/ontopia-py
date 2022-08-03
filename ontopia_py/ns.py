@@ -27,6 +27,8 @@ CLV = Namespace("https://w3id.org/italia/onto/CLV/")
 PATHS = Namespace("https://w3id.org/italia/onto/AtlasOfPaths/")
 ACOND = Namespace("https://w3id.org/italia/onto/AccessCondition/")
 ACCO = Namespace("https://w3id.org/italia/onto/ACCO/")
+ADMS = Namespace("https://w3id.org/italia/onto/ADMS/")
+CIS = Namespace("http://dati.beniculturali.it/cis/")
 
 # OntoPiA Controlled Vocabularies
 
