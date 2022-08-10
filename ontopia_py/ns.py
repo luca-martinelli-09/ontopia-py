@@ -82,3 +82,7 @@ LIFE_EVENTS = Namespace(
     "https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/life-business-event/life-event/")
 BUSINESS_EVENTS = Namespace(
     "https://w3id.org/italia/controlled-vocabulary/classifications-for-public-services/life-business-event/business-event/")
+DATA_THEMES = Namespace(
+    "http://publications.europa.eu/resource/authority/data-theme/")
+SERVICE_SECTOR = Namespace(
+    "http://publications.europa.eu/resource/dataset/nace2/")

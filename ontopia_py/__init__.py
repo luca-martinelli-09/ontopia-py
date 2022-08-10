@@ -85,6 +85,8 @@ def createGraph():
     g.bind("ioservice", IO_SERVICE)
     g.bind("lifeevent", LIFE_EVENTS)
     g.bind("businessevent", BUSINESS_EVENTS)
+    g.bind("datatheme", DATA_THEMES)
+    g.bind("servicesector", SERVICE_SECTOR)
 
     return g
 
