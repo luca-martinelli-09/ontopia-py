@@ -69,7 +69,7 @@ streetToponym.addToGraph(g)
 - [x] https://w3id.org/italia/onto/POI
 - [x] https://w3id.org/italia/onto/POT
 - [ ] https://w3id.org/italia/onto/Project
-- [ ] https://w3id.org/italia/onto/PublicContract
+- [x] https://w3id.org/italia/onto/PublicContract
 - [x] https://w3id.org/italia/onto/RO
 - [x] https://w3id.org/italia/onto/Route
 - [x] https://w3id.org/italia/onto/SM
