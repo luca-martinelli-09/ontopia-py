@@ -86,3 +86,5 @@ DATA_THEMES = Namespace(
     "http://publications.europa.eu/resource/authority/data-theme/")
 SERVICE_SECTOR = Namespace(
     "http://publications.europa.eu/resource/dataset/nace2/")
+FREQUENCIES = Namespace(
+    "http://publications.europa.eu/resource/authority/frequency/")

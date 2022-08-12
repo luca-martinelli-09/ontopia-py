@@ -87,6 +87,7 @@ def createGraph():
     g.bind("businessevent", BUSINESS_EVENTS)
     g.bind("datatheme", DATA_THEMES)
     g.bind("servicesector", SERVICE_SECTOR)
+    g.bind("frequency", FREQUENCIES)
 
     return g
 

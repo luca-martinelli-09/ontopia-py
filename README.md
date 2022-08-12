@@ -61,18 +61,18 @@ streetToponym.addToGraph(g)
 - [ ] https://w3id.org/italia/onto/CulturalHeritage
 - [x] http://dati.beniculturali.it/cis
 - [ ] https://w3id.org/italia/onto/HER
-- [ ] https://w3id.org/italia/onto/Indicator
+- [x] https://w3id.org/italia/onto/Indicator
 - [x] https://w3id.org/italia/onto/IoT
 - [x] https://w3id.org/italia/onto/Language
 - [x] https://w3id.org/italia/onto/MU
-- [ ] https://w3id.org/italia/onto/PARK
+- [x] https://w3id.org/italia/onto/PARK
 - [x] https://w3id.org/italia/onto/POI
 - [x] https://w3id.org/italia/onto/POT
-- [ ] https://w3id.org/italia/onto/Project
+- [x] https://w3id.org/italia/onto/Project
 - [x] https://w3id.org/italia/onto/PublicContract
 - [x] https://w3id.org/italia/onto/RO
 - [x] https://w3id.org/italia/onto/Route
 - [x] https://w3id.org/italia/onto/SM
 - [x] https://w3id.org/italia/onto/TI
-- [ ] https://w3id.org/italia/onto/Transparency
+- [x] https://w3id.org/italia/onto/Transparency
 - [x] https://w3id.org/italia/onto/l0
