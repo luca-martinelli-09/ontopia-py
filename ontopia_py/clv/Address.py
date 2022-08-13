@@ -103,8 +103,3 @@ class Address(Feature):
             for hasRegion in self.hasRegion:
                 g.add(
                     (self.uriRef, CLV["hasRegion"], hasRegion.uriRef))
-
-        if self.isCurrentResidenceOf:
-            for isCurrentResidenceOf in self.isCurrentResidenceOf:
-                g.add(
-                    (self.uriRef, CPV["isCurrentResidenceOf"], isCurrentResidenceOf.uriRef))
