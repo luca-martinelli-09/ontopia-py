@@ -44,6 +44,8 @@ PROVINCES = Namespace(
     "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/provinces/")
 COUNTRIES = Namespace(
     "https://publications.europa.eu/resource/authority/country/")
+ITALY = Namespace(
+    "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/italy/")
 CITIES = Namespace(
     "https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/")
 POI_CLASSIFICATION = Namespace(
