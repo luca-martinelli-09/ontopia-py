@@ -6,7 +6,7 @@ from .ConceptScheme import ConceptScheme
 from .ns import *
 from .Thing import Thing
 
-VERSION = (0, 1, 3)
+VERSION = (0, 1, 4)
 
 __author__ = 'Luca Martinelli'
 __email__ = 'martinelliluca98@gmail.com'
