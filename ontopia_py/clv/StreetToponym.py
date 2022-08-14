@@ -21,9 +21,9 @@ class StreetToponym(AddressComponent):
         if self.officialStreetName:
             for officialStreetName in self.officialStreetName:
                 g.add(
-                    (self.uriRef, CLV["officialStreetName"], officialStreetName.uriRef))
+                    (self.uriRef, CLV["officialStreetName"], officialStreetName))
 
         if self.toponymQualifier:
             for toponymQualifier in self.toponymQualifier:
                 g.add(
-                    (self.uriRef, CLV["toponymQualifier"], toponymQualifier.uriRef))
+                    (self.uriRef, CLV["toponymQualifier"], toponymQualifier))
