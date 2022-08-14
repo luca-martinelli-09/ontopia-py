@@ -67,6 +67,7 @@ def createGraph():
     g.bind("province", PROVINCES)
     g.bind("country", COUNTRIES)
     g.bind("city", CITIES)
+    g.bind("italy", ITALY)
     g.bind("poiclass", POI_CLASSIFICATION)
     g.bind("accostar", ACCO_STAR_RATINGS)
     g.bind("accotype", ACCO_TYPES)
