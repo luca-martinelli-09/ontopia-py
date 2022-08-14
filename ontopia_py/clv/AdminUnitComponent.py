@@ -28,17 +28,17 @@ class AdminUnitComponent(AddressComponent):
         if self.hasDirectHigherRank:
             for hasDirectHigherRank in self.hasDirectHigherRank:
                 g.add(
-                    (self.uriRef, CLV["hasDirectHigherRank"], hasDirectHigherRank))
+                    (self.uriRef, CLV["hasDirectHigherRank"], hasDirectHigherRank.uriRef))
 
         if self.hasDirectLowerRank:
             for hasDirectLowerRank in self.hasDirectLowerRank:
                 g.add(
-                    (self.uriRef, CLV["hasDirectLowerRank"], hasDirectLowerRank))
+                    (self.uriRef, CLV["hasDirectLowerRank"], hasDirectLowerRank.uriRef))
 
         if self.hasHigherRank:
             for hasHigherRank in self.hasHigherRank:
-                g.add((self.uriRef, CLV["hasHigherRank"], hasHigherRank))
+                g.add((self.uriRef, CLV["hasHigherRank"], hasHigherRank.uriRef))
 
         if self.hasLowerRank:
             for hasLowerRank in self.hasLowerRank:
-                g.add((self.uriRef, CLV["hasLowerRank"], hasLowerRank))
+                g.add((self.uriRef, CLV["hasLowerRank"], hasLowerRank.uriRef))
