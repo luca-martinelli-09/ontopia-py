@@ -23,13 +23,10 @@ class Office(SupportUnit):
         super()._addProperties(g)
 
         if self.hasEInvoiceService:
-            for hasEInvoiceService in self.hasEInvoiceService:
-                g.add(
-                    (self.uriRef, COV["hasEInvoiceService"], hasEInvoiceService.uriRef))
+            g.add((self.uriRef, COV["hasEInvoiceService"], self.hasEInvoiceService.uriRef))
 
         if self.isPartOf:
-            for isPartOf in self.isPartOf:
-                g.add((self.uriRef, COV["isPartOf"], isPartOf.uriRef))
+            g.add((self.uriRef, COV["isPartOf"], self.isPartOf.uriRef))
 
         if self.officeIdentifier:
             g.add((self.uriRef, COV["officeIdentifier"],
