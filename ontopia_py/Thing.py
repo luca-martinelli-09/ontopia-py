@@ -20,17 +20,18 @@ class Thing:
     def _addProperties(self, g: Graph):
         pass
 
-    def addToGraph(self, g: Graph, isTopConcept=False):
-        g.add((self.uriRef, RDF.type, self.__type__))
+    def addToGraph(self, g: Graph, isTopConcept=False, onlyProperties=False):
+        if not onlyProperties:
+            g.add((self.uriRef, RDF.type, self.__type__))
 
-        for title in self._titles:
-            g.add((self.uriRef, DC.title, title))
+            for title in self._titles:
+                g.add((self.uriRef, DC.title, title))
 
-        if self._dataset:
-            g.add((self.uriRef, SKOS.inScheme, self._dataset.uriRef))
+            if self._dataset:
+                g.add((self.uriRef, SKOS.inScheme, self._dataset.uriRef))
 
-        if isTopConcept:
-            g.add(
-                (self._dataset.uriRef, SKOS.hasTopConcept, self.uriRef))
+            if isTopConcept:
+                g.add(
+                    (self._dataset.uriRef, SKOS.hasTopConcept, self.uriRef))
 
         self._addProperties(g)
