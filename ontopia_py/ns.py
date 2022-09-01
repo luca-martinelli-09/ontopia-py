@@ -61,7 +61,7 @@ PERSON_TITLE = Namespace(
 PERSON_PARENTAL_REL = Namespace(
     "https://w3id.org/italia/controlled-vocabulary/classifications-for-people/parental-relationship-types/")
 PERSON_SEX = Namespace(
-    "https://w3id.org/italia/controlled-vocabulary/classifications-for-people/sex")
+    "https://w3id.org/italia/controlled-vocabulary/classifications-for-people/sex/")
 ORG_LEGAL_STATUS = Namespace(
     "https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/legal-status/")
 ORG_ATECO = Namespace(
