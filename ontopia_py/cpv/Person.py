@@ -113,6 +113,9 @@ class Person(Agent):
                 g.add(
                     (self.uriRef, CPV["hasCitizenship"], hasCitizenship.uriRef))
 
+        if self.hasSex:
+            g.add((self.uriRef, CPV["hasSex"], self.hasSex.uriRef))
+
         if self.hasBirthPlace:
             g.add((self.uriRef, CPV["hasBirthPlace"], self.hasBirthPlace.uriRef))
 
